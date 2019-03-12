@@ -1,0 +1,39 @@
+spring:
+    application:
+        name: springbootmultids
+    profiles:
+        active: dev
+
+db1:
+    #jackson:
+    #    serialization:
+    #        write_dates_as_timestamps: false
+    jpa:
+        open-in-view: false
+        hibernate:
+            ddl-auto: none
+            naming:
+                physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+                implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+
+db2:
+    #jackson:
+    #    serialization:
+    #        write_dates_as_timestamps: false
+    jpa:
+        open-in-view: false
+        hibernate:
+            ddl-auto: none
+            naming:
+                physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+                implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+
+server:
+    session:
+        cookie:
+            http-only: true
+
+async:
+    core-pool-size: 2
+    max-pool-size: 50
+    queue-capacity: 10000
